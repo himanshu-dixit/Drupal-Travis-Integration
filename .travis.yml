@@ -32,7 +32,7 @@ before_install:
   - composer self-update
   - composer validate --no-check-all --ansi
   - composer install
-  -   composer global require drupal/coder:^8.2.12
+  - composer global require drupal/coder:^8.2.12
   - composer global require dealerdirect/phpcodesniffer-composer-installer
 
 script:
