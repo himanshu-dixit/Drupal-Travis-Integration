@@ -1,3 +1,5 @@
 cd core
 ../vendor/bin/phpunit --testsuite=unit
-../vendor/bin/phpcs ../modules/*
+
+cd ../
+vendor/bin/phpcs -n --standard=Drupal modules/*
