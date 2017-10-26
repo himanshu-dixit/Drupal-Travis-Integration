@@ -34,4 +34,4 @@ before_install:
   - composer install
 
 script:
-  - test.sh
+  - ./test.sh
