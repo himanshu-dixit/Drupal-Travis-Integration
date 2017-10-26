@@ -1,0 +1,39 @@
+sudo: true
+language: php
+dist: trusty
+
+php:
+  - 7.1
+
+matrix:
+  fast_finish: true
+
+env:
+  global:
+    - DEPLOY_SOURCE_BRANCH=8.x
+    - COMPOSER_BIN=$TRAVIS_BUILD_DIR/vendor/bin
+    - BLT_DIR=$TRAVIS_BUILD_DIR
+    - IS_PULL_REQUEST=$TRAVIS_PULL_REQUEST
+    - BUILD_DIR=$TRAVIS_BUILD_DIR
+
+cache:
+  bundler: true
+  apt: true
+  directories:
+  - "$HOME/.composer/cache"
+  - "$HOME/.console"
+  - "$HOME/.drush/cache"
+  - "$HOME/.nvm"
+
+addons:
+  chrome: stable
+
+before_install:
+  - composer self-update
+  - composer validate --no-check-all --ansi
+  - composer install
+  - composer global require drupal/coder:^8.2.12
+  - composer global require dealerdirect/phpcodesniffer-composer-installer
+
+script:
+  - ./test.sh
