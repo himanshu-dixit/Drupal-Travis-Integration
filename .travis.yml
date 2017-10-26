@@ -34,5 +34,4 @@ before_install:
   - composer install
 
 script:
-    - php core/scripts/run-tests.sh --sqlite /tmp/.ht.sqlite --die-on-fail --dburl sqlite://tmp/.ht.sqlite --all
-    - test.sh
+  - test.sh
