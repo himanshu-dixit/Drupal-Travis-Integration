@@ -1,0 +1,50 @@
+diff --git a/config/install/block.block.adminimal_theme_help.yml b/config/install/block.block.adminimal_theme_help.yml
+deleted file mode 100644
+index 2c677a2..0000000
+--- a/config/install/block.block.adminimal_theme_help.yml
++++ /dev/null
+@@ -1,19 +0,0 @@
+-langcode: en
+-status: true
+-dependencies:
+-  module:
+-    - help
+-  theme:
+-    - adminimal_theme
+-id: adminimal_theme_help
+-theme: adminimal_theme
+-region: help
+-weight: 0
+-provider: null
+-plugin: help_block
+-settings:
+-  id: help_block
+-  label: Help
+-  provider: help
+-  label_display: '0'
+-visibility: {  }
+diff --git a/config/optional/block.block.adminimal_theme_help.yml b/config/optional/block.block.adminimal_theme_help.yml
+new file mode 100644
+index 0000000..2c677a2
+--- /dev/null
++++ b/config/optional/block.block.adminimal_theme_help.yml
+@@ -0,0 +1,19 @@
++langcode: en
++status: true
++dependencies:
++  module:
++    - help
++  theme:
++    - adminimal_theme
++id: adminimal_theme_help
++theme: adminimal_theme
++region: help
++weight: 0
++provider: null
++plugin: help_block
++settings:
++  id: help_block
++  label: Help
++  provider: help
++  label_display: '0'
++visibility: {  }

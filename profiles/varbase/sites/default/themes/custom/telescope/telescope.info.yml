@@ -1,0 +1,95 @@
+core: 8.x
+type: theme
+base theme: vartheme
+
+name: 'telescope'
+description: 'Uses the Bootstrap framework LESS source files and must be compiled (not for beginners).'
+package: 'Varbase'
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  hero_slider: 'Media Hero Slider'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+# Bootstrap styles and scripts libraries.
+  - telescope/bootstrap-styles
+  - telescope/bootstrap-scripts
+  
+# telescope custom Vartheme styles and scripts libraries.
+  - telescope/vartheme-styles
+
+# telescope global styles and scripts libraries.
+  - telescope/global-styles
+  - telescope/global-scripts
+  
+# telescope Varbase Bootstrap Paragraphs colors theme.
+  - telescope/vbp-colors
+
+# OPTIONALLY: You can choose to remove Vartheme base theme stylesheets and/or
+# Javascript files.
+libraries-override:
+# Comment lines to keep using libraries from vartheme.
+  bootstrap_library/bootstrap-cdn: false
+  bootstrap_library/bootstrap: false
+  bootstrap_library/bootstrap-dev: false
+  vartheme/bootstrap-styles: false
+  vartheme/bootstrap-scripts: false
+  vartheme/global-styles: false
+  vartheme/global-scripts: false
+  
+# Comment lines to use (RTL) libraries from vartheme.
+  vartheme/bootstrap-styles-rtl: false
+  vartheme/global-styles-rtl: false
+  telescope/bootstrap-styles-rtl: false
+  telescope/vartheme-styles-rtl: false
+  telescope/global-styles-rtl: false
+
+# telescope Varbase Bootstrap Paragraphs colors theme.
+  varbase_bootstrap_paragraphs/vbp-colors: telescope/vbp-colors
+  vartheme/vbp-colors: telescope/vbp-colors
+  
+# Uncomment lines to replace, exclude css and js files from vartheme.
+# You will need to copy less/css files from Vartheme to use theme for the
+# overriden library.
+# ------------------------------------------------------------------------------
+#  vartheme/bs-callouts: telescope/bs-callouts
+#  vartheme/outside-in: telescope/outside-in
+#  vartheme/edge2edge: telescope/edge2edge
+#  vartheme/navbar-admin: telescope/navbar-admin
+# ------------------------------------------------------------------------------
+#  vartheme/ajax: telescope/ajax
+#  vartheme/alert: telescope/alert
+#  vartheme/field: telescope/field
+#  vartheme/file: telescope/file
+#  vartheme/filter: telescope/filter
+#  vartheme/form: telescope/form
+#  vartheme/icon: telescope/icon
+#  vartheme/navbar: telescope/navbar
+#  vartheme/node: telescope/node
+#  vartheme/panel: telescope/panel
+#  vartheme/progress-bar: telescope/progress-bar
+#  vartheme/table-drag: telescope/table-drag
+#  vartheme/tabs: telescope/tabs
+#  vartheme/toolbar: telescope/toolbar
+#  vartheme/autocomplete: telescope/autocomplete
+
+ckeditor_stylesheets:
+  - css/base/bootstrap.base.css
+  - css/base/vartheme.base.css
+  - css/base/telescope.base.css
+  - css/theme/content.theme.css
+  - css/component/alert.component.css
+  - css/component/icon.component.css
+  - css/component/node.component.css
+  - css/component/bs-callouts.component.css
+  - css/layout/edge2edge.layout.css
